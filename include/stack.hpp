@@ -22,7 +22,7 @@ public:
 	T pop();
 	std::ostream& print(std::ostream& os);
 			
-	friend std::ostream& operator<< (std::ostream& os, stack<T>& obj);
+	
 	
 private:
 	T* array_;
@@ -133,7 +133,7 @@ std::ostream& stack<T>::print(std::ostream& os)
 template <typename T>
 std::ostream& operator<< (std::ostream& os, stack<T>& obj)
 {
-	return obj.os(os);
+	return obj.print(os);
 }
 
 template <typename T>
